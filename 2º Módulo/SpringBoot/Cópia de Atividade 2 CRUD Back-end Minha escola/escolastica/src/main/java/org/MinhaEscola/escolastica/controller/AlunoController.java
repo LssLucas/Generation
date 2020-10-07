@@ -45,6 +45,11 @@ public class AlunoController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(aluno));
 	}
 	
+	@PostMapping("/all")
+	public ResponseEntity <List<Aluno>> postAll (@RequestBody List<Aluno> aluno){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.saveAll(aluno));
+	}
+	
 	@PutMapping
 	public ResponseEntity <Aluno> put (@RequestBody Aluno aluno){
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(aluno));
