@@ -8,6 +8,5 @@ import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.Postagem;
 
 public interface PostagemRepository extends JpaRepository<Postagem, Long> 
 {
-
-	public List<Postagem> findAllByTituloContainingIgnoreCase(String Search);
+	public List<Postagem> findAllByAssuntoContainingIgnoreCase(String Search);
 }
