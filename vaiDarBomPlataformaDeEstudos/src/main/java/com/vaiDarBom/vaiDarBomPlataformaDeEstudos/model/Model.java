@@ -1,6 +1,5 @@
 package com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,13 +11,6 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name="model")
 public class Model {
-	/*
-	 id
-	 assunto
-	 nivelEnsino
-	 disciplinaMateria
-	 ativo
-	*/	
 	
 	//Criando coluna/atributo id
 	@Id
@@ -27,17 +19,17 @@ public class Model {
 	
 	//Criando coluna/atributo 'assunto'
 	@NotNull
-	@Size(min=1,max=100)
+	@Size(max=100)
 	private String assunto;
 	
 	//Criando coluna/atributo 'nivelDeEnsino'
 	@NotNull
-	@Size(min=1,max=100)
+	@Size(max=100)
 	private String nivelEnsino;
 	
 	//Criando coluna/atributo 'disciplinaMateria'
 	@NotNull
-	@Size(min=1,max=100)
+	@Size(max=100)
 	private String disciplinaMateria;
 	
 	//Criando coluna/atributo 'ativo'
