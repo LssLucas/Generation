@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\novo_\OneDrive\Área de Trabalho\Nova pasta (2)\Generation\vaiDarBomPlataformaDeEstudos"/>
 			<item value="C:\Users\novo_\OneDrive\Documentos\ONG Generations\2º Módulo\SpringBoot\vaiDarBomPlataformaDeEstudos"/>
 			<item value="C:\Users\novo_\OneDrive\Área de Trabalho\vaiDarBomPlataformaDeEstudos"/>
 		</list>

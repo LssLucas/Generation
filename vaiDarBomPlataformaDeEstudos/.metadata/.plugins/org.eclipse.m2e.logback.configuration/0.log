@@ -34,3 +34,6 @@
 2020-10-09 10:40:00,116 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\novo_\OneDrive\Documentos\ONG Generations\2º Módulo\SpringBoot\vaiDarBomPlataformaDeEstudos\target\classes\META-INF\maven\com.vaiDarBom\vaiDarBomPlataformaDeEstudos\src\main\resources
 2020-10-09 10:40:00,117 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-09 10:40:00,117 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\novo_\OneDrive\Documentos\ONG Generations\2º Módulo\SpringBoot\vaiDarBomPlataformaDeEstudos\target\classes\META-INF\maven\com.vaiDarBom\vaiDarBomPlataformaDeEstudos\src\test\resources
+2020-10-13 13:37:50,547 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-13 13:40:19,855 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-13 13:42:02,445 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

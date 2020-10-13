@@ -1,6 +1,0 @@
-package com.helloworld.hello.controller;
-
-@RestController 
-public class HelloController {
-
-}
