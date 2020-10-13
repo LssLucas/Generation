@@ -1,24 +1,28 @@
 package com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model;
 
-import javax.persistence.Column;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
-import com.blogPessoal.MeuBlog.model.Tema;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "Postagem")
+@Table(name = "postagem")
 public class Postagem {
 
 	/*
-	 * ID PK Assunto String NivelEnsino String DisciplinaMateria String ATIVO BOOL
+	 * ID PK
+	 * Assunto String 
+	 * NivelEnsino String DisciplinaMateria String ATIVO BOOL
 	 * id_Tema ( Tema OBJ ) FK
 	 */
 
@@ -27,21 +31,6 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	// Criando coluna/atributo 'assunto'
-	@NotNull
-	@Size(min = 1, max = 100)
-	private String assunto;
-
-	// Criando coluna/atributo 'nivelDeEnsino'
-	@NotNull
-	@Size(min = 1, max = 100)
-	private String nivelEnsino;
-
-	// Criando coluna/atributo 'disciplinaMateria'
-	@NotNull
-	@Size(min = 1, max = 100)
-	private String disciplinaMateria;
-
 	// Criando coluna/atributo 'ativo'
 	@NotNull
 	private boolean ativo;
@@ -49,6 +38,20 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties ("postagem")
 	private Tema tema;
+	
+	//@Size(min=1)
+	private String imagem;
+	
+	//@Size(min=1)
+	private String link;
+	
+	@Temporal(TemporalType.TIMESTAMP) 	
+	private Date data = new java.sql.Date(System.currentTimeMillis());
+	
+	
+	private int euLi;
+	
+	private String mensagem;
 
 	public long getId() {
 		return id;
@@ -58,30 +61,6 @@ public class Postagem {
 		this.id = id;
 	}
 
-	public String getAssunto() {
-		return assunto;
-	}
-
-	public void setAssunto(String assunto) {
-		this.assunto = assunto;
-	}
-
-	public String getNivelEnsino() {
-		return nivelEnsino;
-	}
-
-	public void setNivelEnsino(String nivelEnsino) {
-		this.nivelEnsino = nivelEnsino;
-	}
-
-	public String getDisciplinaMateria() {
-		return disciplinaMateria;
-	}
-
-	public void setDisciplinaMateria(String disciplinaMateria) {
-		this.disciplinaMateria = disciplinaMateria;
-	}
-
 	public boolean isAtivo() {
 		return ativo;
 	}
@@ -89,5 +68,46 @@ public class Postagem {
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
 	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
+	}
+
+	public int getEuLi() {
+		return euLi;
+	}
+
+	public void setEuLi(int euLi) {
+		this.euLi = euLi;
+	}
+
+	public String getMensagem() {
+		return mensagem;
+	}
+
+	public void setMensagem(String mensagem) {
+		this.mensagem = mensagem;
+	}
+	
 
 }
