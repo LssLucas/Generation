@@ -1,0 +1,5 @@
+package com.vaiDarBom.vaiDarBomPlataformaDeEstudos.security;
+
+public class BasicSecurityConfig {
+
+}
