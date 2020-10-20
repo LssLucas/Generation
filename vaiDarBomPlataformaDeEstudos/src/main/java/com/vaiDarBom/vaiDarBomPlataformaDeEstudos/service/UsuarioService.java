@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.Usuario;
+import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.UsuarioLogin;
 import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.repository.UsuarioRepository;
 
 
