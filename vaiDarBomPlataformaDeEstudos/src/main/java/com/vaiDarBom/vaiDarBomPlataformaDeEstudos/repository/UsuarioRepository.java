@@ -9,6 +9,10 @@ import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.Usuario;
 
 public interface UsuarioRepository  extends JpaRepository<Usuario, Long> {
 	public List<Usuario> findAllByNomeContainingIgnoreCase (String nome);
+	//public Usuario findByEmailContainingIgnoreCase (String email);
 	//fazer com email
+	
+	public Optional<Usuario> findByUsuario (String usuario);
+	//public Optional<Usuario> findByUsuarioAndSenha (String usuario);
 
 }
