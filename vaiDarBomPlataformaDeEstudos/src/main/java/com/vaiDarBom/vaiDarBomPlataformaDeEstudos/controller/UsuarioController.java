@@ -1,6 +1,7 @@
 package com.vaiDarBom.vaiDarBomPlataformaDeEstudos.controller;
 
 import java.util.List;
+import java.util.Optional;//Lucas
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.Usuario;
+import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.UsuarioLogin;//Lucas
 import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.repository.UsuarioRepository;
+import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.service.UsuarioService;//Lucas
 
 @RestController
 @RequestMapping ("/usuarios")
@@ -26,6 +29,9 @@ public class UsuarioController {
 	
 	@Autowired
 	UsuarioRepository repository;
+	
+	@Autowired
+	private UsuarioService UsuarioService;
 
 	@GetMapping
 	public ResponseEntity <List<Usuario>> getAll()
@@ -48,12 +54,21 @@ public class UsuarioController {
 		
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(usuario));
 	}
+	@PostMapping("/logar")
+	public ResponseEntity<UsuarioLogin> Autentication(@RequestBody Optional<UsuarioLogin> user) {
+		return UsuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+	}
+	@PostMapping("/cadastrar")
+	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.body(UsuarioService.CadastrarUsuario(usuario));
+	}
 	@PostMapping
 	public ResponseEntity<Usuario> post (@RequestBody Usuario usuario)
 	{
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
 	}
-	
 	@PutMapping
 	public ResponseEntity<Usuario> put (@RequestBody Usuario usuario)
 	{

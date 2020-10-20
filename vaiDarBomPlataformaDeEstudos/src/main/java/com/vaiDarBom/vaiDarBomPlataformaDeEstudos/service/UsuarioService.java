@@ -13,7 +13,6 @@ import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.model.UsuarioLogin;
 import com.vaiDarBom.vaiDarBomPlataformaDeEstudos.repository.UsuarioRepository;
 
 
-
 @Service
 public class UsuarioService {
 	
@@ -37,7 +36,7 @@ public class UsuarioService {
 		if(usuario.isPresent()) {
 			if(encoder.matches(user.get().getSenha(), usuario.get().getSenha()));{
 				
-				String auth = user.get().getSenha()+" : "+ user.get().getSenha();
+				String auth = user.get().getSenha()+":"+ user.get().getSenha();
 				byte[] encodeAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic "+new String(encodeAuth);
 				
