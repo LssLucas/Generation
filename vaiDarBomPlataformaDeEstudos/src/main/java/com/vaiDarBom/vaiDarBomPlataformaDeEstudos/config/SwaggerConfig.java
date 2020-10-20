@@ -1,4 +1,4 @@
-package com.vaiDarBom.vaiDarBomPlataformaDeEstudos.service.config;
+package com.vaiDarBom.vaiDarBomPlataformaDeEstudos.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
